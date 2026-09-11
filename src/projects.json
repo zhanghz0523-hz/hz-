@@ -478,7 +478,8 @@
       "/assets/xinli-22.webp",
       "/assets/xinli-23.webp"
     ],
-    "theme": "dark"
+    "theme": "light",
+    "background": "#ffffff"
   },
   {
     "id": "jinzhe",
