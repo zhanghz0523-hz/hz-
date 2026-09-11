@@ -25,7 +25,8 @@
       "/assets/tianyuan-18.webp",
       "/assets/tianyuan-19.webp"
     ],
-    "note": "毕业设计"
+    "note": "毕业设计",
+    "theme": "light"
   },
   {
     "id": "future",
@@ -48,7 +49,8 @@
       "/assets/future-14.webp",
       "/assets/future-15.webp",
       "/assets/future-16.webp"
-    ]
+    ],
+    "theme": "light"
   },
   {
     "id": "yosemite",
@@ -74,7 +76,8 @@
       "/assets/yosemite-20.webp",
       "/assets/yosemite-21.webp",
       "/assets/yosemite-22.webp"
-    ]
+    ],
+    "theme": "light"
   },
   {
     "id": "gongyuan",
@@ -95,7 +98,8 @@
       "/assets/gongyuan-11.webp",
       "/assets/gongyuan-12.webp",
       "/assets/gongyuan-13.webp"
-    ]
+    ],
+    "theme": "light"
   },
   {
     "id": "shangyuan",
@@ -116,7 +120,8 @@
       "/assets/shangyuan-10.webp",
       "/assets/shangyuan-11.webp",
       "/assets/shangyuan-12.webp"
-    ]
+    ],
+    "theme": "light"
   },
   {
     "id": "poly",
@@ -161,7 +166,8 @@
       "/assets/poly-36.webp",
       "/assets/poly-37.webp",
       "/assets/poly-38.webp"
-    ]
+    ],
+    "theme": "light"
   },
   {
     "id": "runze",
@@ -186,7 +192,8 @@
       "/assets/runze-14.webp",
       "/assets/runze-15.webp",
       "/assets/runze-16.webp"
-    ]
+    ],
+    "theme": "light"
   },
   {
     "id": "yuansheng",
@@ -207,7 +214,8 @@
       "/assets/yuansheng-11.webp",
       "/assets/yuansheng-12.webp",
       "/assets/yuansheng-13.webp"
-    ]
+    ],
+    "theme": "light"
   },
   {
     "id": "guoan",
@@ -226,7 +234,8 @@
       "/assets/guoan-8.webp",
       "/assets/guoan-9.webp",
       "/assets/guoan-10.webp"
-    ]
+    ],
+    "theme": "light"
   },
   {
     "id": "yuyuan",
@@ -247,7 +256,8 @@
       "/assets/yuyuan-11.webp",
       "/assets/yuyuan-12.webp",
       "/assets/yuyuan-13.webp"
-    ]
+    ],
+    "theme": "light"
   },
   {
     "id": "taihe",
@@ -267,7 +277,8 @@
       "/assets/taihe-10.webp",
       "/assets/taihe-11.webp",
       "/assets/taihe-12.webp"
-    ]
+    ],
+    "theme": "light"
   },
   {
     "id": "huayue",
@@ -284,7 +295,8 @@
       "/assets/huayue-6.webp",
       "/assets/huayue-7.webp",
       "/assets/huayue-8.webp"
-    ]
+    ],
+    "theme": "light"
   },
   {
     "id": "wangshan",
@@ -312,7 +324,8 @@
       "/assets/wangshan-17.webp",
       "/assets/wangshan-18.webp",
       "/assets/wangshan-19.webp"
-    ]
+    ],
+    "theme": "light"
   },
   {
     "id": "lighting",
@@ -336,7 +349,8 @@
       "/assets/lighting-13.webp",
       "/assets/lighting-14.webp",
       "/assets/lighting-15.webp"
-    ]
+    ],
+    "theme": "dark"
   },
   {
     "id": "xiongan",
@@ -353,7 +367,8 @@
       "/assets/xiongan-6.webp",
       "/assets/xiongan-7.webp",
       "/assets/xiongan-8.webp"
-    ]
+    ],
+    "theme": "dark"
   },
   {
     "id": "shengboke",
@@ -387,7 +402,8 @@
       "/assets/shengboke-24.webp",
       "/assets/shengboke-25.webp",
       "/assets/shengboke-26.webp"
-    ]
+    ],
+    "theme": "light"
   },
   {
     "id": "baochao",
@@ -408,7 +424,8 @@
       "/assets/baochao-11.webp",
       "/assets/baochao-12.webp",
       "/assets/baochao-13.webp"
-    ]
+    ],
+    "theme": "light"
   },
   {
     "id": "hangzhou-cafe",
@@ -427,7 +444,8 @@
       "/assets/baochao-20.webp",
       "/assets/baochao-21.webp",
       "/assets/baochao-22.webp"
-    ]
+    ],
+    "theme": "light"
   },
   {
     "id": "xinli",
@@ -459,7 +477,8 @@
       "/assets/xinli-21.webp",
       "/assets/xinli-22.webp",
       "/assets/xinli-23.webp"
-    ]
+    ],
+    "theme": "dark"
   },
   {
     "id": "jinzhe",
@@ -493,6 +512,7 @@
       "/assets/jinzhe-24.webp",
       "/assets/jinzhe-25.webp"
     ],
-    "note": "部分图像在原作品集中标注了 AI 生成技术提示。"
+    "note": "部分图像在原作品集中标注了 AI 生成技术提示。",
+    "theme": "light"
   }
 ]

@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useLayoutEffect, useState} from 'react';
 import {createRoot} from 'react-dom/client';
 import projects from './projects.json';
 import './style.css';
@@ -9,6 +9,8 @@ function App(){
  const [route,setRoute]=useState(location.hash),[copied,setCopied]=useState(false),[paused,setPaused]=useState(()=>window.matchMedia('(prefers-reduced-motion: reduce)').matches),[slide,setSlide]=useState(0);
  useEffect(()=>{const update=()=>{setRoute(location.hash);if(location.hash.startsWith('#project/'))window.scrollTo(0,0)};window.addEventListener('hashchange',update);return()=>window.removeEventListener('hashchange',update)},[]);
  const project=projects.find(p=>route===`#project/${p.id}`);
+ useLayoutEffect(()=>{const root=document.documentElement;const theme=project?.theme||'dark';root.dataset.projectTheme=project?theme:'home';const meta=document.querySelector('meta[name="theme-color"]');if(meta)meta.content=theme==='light'?'#f5f5f3':'#101111';return()=>{delete root.dataset.projectTheme}},[project]);
+
  useEffect(()=>{document.title=project?`${project.name} — 张宏志 HZ`:'张宏志 HZ — 室内设计师';if(!project&&route){requestAnimationFrame(()=>document.getElementById(route.slice(1))?.scrollIntoView())}},[route,project]);
  useEffect(()=>{if(paused||project)return;let alive=true;const timer=setInterval(()=>{const next=(slide+1)%heroProjects.length;const image=new Image();image.onload=()=>{if(alive)setSlide(next)};image.src=heroProjects[next].images[0]},5500);return()=>{alive=false;clearInterval(timer)}},[paused,project,slide]);
  async function copy(){try{await navigator.clipboard.writeText('z595654303');setCopied(true);setTimeout(()=>setCopied(false),2500)}catch{setCopied(false)}}
