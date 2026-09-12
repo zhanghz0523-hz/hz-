@@ -2,7 +2,7 @@ const http = require('node:http');
 const fs = require('node:fs');
 const path = require('node:path');
 const root = path.join(__dirname, 'dist');
-const types = {'.html':'text/html; charset=utf-8','.js':'text/javascript','.css':'text/css','.webp':'image/webp','.png':'image/png','.mp4':'video/mp4'};
+const types = {'.html':'text/html; charset=utf-8','.js':'text/javascript','.css':'text/css','.webp':'image/webp','.png':'image/png','.jpg':'image/jpeg','.jpeg':'image/jpeg','.gif':'image/gif','.avif':'image/avif','.svg':'image/svg+xml','.mp4':'video/mp4'};
 http.createServer((req,res)=>{
  let filename;
  try { filename=path.resolve(root,'.'+decodeURIComponent(new URL(req.url,'http://localhost').pathname)); }
@@ -15,3 +15,4 @@ http.createServer((req,res)=>{
   fs.createReadStream(filename).pipe(res);
  });
 }).on('error',error=>{console.error(error.message);process.exitCode=1}).listen(4180,'127.0.0.1',()=>console.log('HZ portfolio: http://127.0.0.1:4180/'));
+

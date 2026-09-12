@@ -1,3 +1,6 @@
 node_modules/
 dist/
 .sites-runtime/
+
+# Local Netlify folder
+.netlify
