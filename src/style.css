@@ -331,3 +331,11 @@ header nav a:hover::after,header nav a.active::after{right:0}
  .resume-education>span,.resume-practice>span{font-size:8px;letter-spacing:.02em}
  .resume-quote cite{font-size:9px;margin-top:15px}
 }
+/* Fit long display headings inside the mobile content column. */
+@media(max-width:700px){
+ .archive-title>div{min-width:0;max-width:100%}
+ .archive-title h1{font-size:clamp(24px,9.5vw,60px)}
+ .contact-editorial-content h1{font-size:clamp(32px,12.5vw,82px);max-width:100%}
+ .contact-editorial-email>a{overflow-wrap:anywhere}
+ .resume-practice>span{white-space:normal;overflow-wrap:anywhere}
+}
