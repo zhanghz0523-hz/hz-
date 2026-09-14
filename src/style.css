@@ -307,3 +307,27 @@ header nav a:hover::after,header nav a.active::after{right:0}
  .archive-view-list .archive-strip-meta h2{font-size:25px}
  .archive-view-image .archive-strip-meta{min-height:88px;padding-top:48px;padding-bottom:14px}
 }
+/* Keep the desktop resume composition on narrow screens. */
+@media(max-width:700px){
+ .resume-page{padding-top:36px}
+ .resume-layout{grid-template-columns:minmax(0,1.65fr) minmax(0,1fr);gap:6%}
+ .resume-contact-line{flex-wrap:nowrap;justify-content:space-between;gap:8px;font-size:clamp(8px,2.1vw,12px)}
+ .resume-title{margin:42px 0 48px;font-size:clamp(22px,5vw,30px)}
+ .resume-title>span{font-size:13px}
+ .resume-main,.resume-person{min-width:0}
+ .resume-person{max-width:none;gap:28px;overflow-wrap:anywhere}
+ .resume-brand.brand-mark{width:70px;height:52px;margin:0 0 22px}
+ .resume-block+.resume-block{margin-top:28px}
+ .resume-block h3,.resume-block h3>span{font-size:clamp(11px,2.8vw,17px);margin-bottom:15px}
+ .resume-job h4,.resume-job p,.resume-block>p,.resume-tool-list,.resume-tool-list span{font-size:clamp(10px,2.4vw,14px);line-height:1.85}
+ .resume-job .resume-date{font-size:clamp(8px,2vw,11px)}
+ .resume-job+.resume-job{margin-top:22px}
+ .resume-identity{margin-top:12px}
+ .resume-identity>p{font-size:clamp(9px,2.3vw,14px);letter-spacing:.04em}
+ .resume-identity h3{font-size:clamp(15px,3.7vw,21px);letter-spacing:.08em}
+ .resume-identity>span,.resume-birthday{font-size:10px}
+ .resume-education,.resume-practice{margin-top:20px}
+ .resume-education p,.resume-practice p,.resume-quote{font-size:clamp(10px,2.4vw,14px)}
+ .resume-education>span,.resume-practice>span{font-size:8px;letter-spacing:.02em}
+ .resume-quote cite{font-size:9px;margin-top:15px}
+}
