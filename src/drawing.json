@@ -1,0 +1,65 @@
+[
+  {
+    "id": 3,
+    "src": "/assets/drawing/drawing-3.webp",
+    "width": 960,
+    "height": 1280,
+    "category": "painting"
+  },
+  {
+    "id": 4,
+    "src": "/assets/drawing/drawing-4.webp",
+    "width": 960,
+    "height": 1284,
+    "category": "painting"
+  },
+  {
+    "id": 5,
+    "src": "/assets/drawing/drawing-5.webp",
+    "width": 1080,
+    "height": 1444,
+    "category": "painting"
+  },
+  {
+    "id": 6,
+    "src": "/assets/drawing/drawing-6.webp",
+    "width": 1024,
+    "height": 1448,
+    "category": "painting"
+  },
+  {
+    "id": 7,
+    "src": "/assets/drawing/drawing-7.webp",
+    "width": 1080,
+    "height": 1404,
+    "category": "painting"
+  },
+  {
+    "id": 8,
+    "src": "/assets/drawing/drawing-8.webp",
+    "width": 864,
+    "height": 1156,
+    "category": "painting"
+  },
+  {
+    "id": 9,
+    "src": "/assets/drawing/drawing-9.webp",
+    "width": 810,
+    "height": 1146,
+    "category": "painting"
+  },
+  {
+    "id": 1,
+    "src": "/assets/drawing/drawing-1.webp",
+    "width": 3600,
+    "height": 1805,
+    "category": "plan"
+  },
+  {
+    "id": 2,
+    "src": "/assets/drawing/drawing-2.webp",
+    "width": 3600,
+    "height": 2679,
+    "category": "plan"
+  }
+]

@@ -38,3 +38,8 @@
 .extension-strip-drawing .archive-filmgroup>div:nth-child(even) img{object-position:center 20%}
 .extension-strip-drawing .archive-filmgroup>div:nth-child(odd) img{object-position:center 80%}
 @media(max-width:700px){.extensions-index-intro{padding-top:24px}.extensions-index .extensions-heading{margin-top:42px}.extensions-index h1{font-size:28px}.extensions-index h1 span{font-size:36px}}
+
+/* Reveal color only on the individual hovered image in the practice index. */
+#practice .archive-filmstrip img{filter:grayscale(1);transition:transform .75s cubic-bezier(.2,.7,.2,1),filter .45s ease}
+@media(hover:hover){#practice .archive-filmgroup>div:hover img{filter:grayscale(0)}}
+@media(prefers-reduced-motion:reduce){#practice .archive-filmstrip img{transition:none}}

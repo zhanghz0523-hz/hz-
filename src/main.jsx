@@ -4,6 +4,7 @@ import projectData from './projects.json';
 import {selectProjectImages} from './project-image-selection';
 import './style.css';
 import Photography from './Photography';
+import Drawing from './Drawing';
 import BuiltPhotography from './BuiltPhotography';
 import Extensions from './Extensions';
 
@@ -27,7 +28,7 @@ function imageProps(src){
 const practiceSections=[
  {id:'built',name:'项目拍摄',en:'PROJECT PHOTOGRAPHY',note:'项目名称 · 地点 · 年份',description:'已完成项目的现场记录。'},
  {id:'photo',name:'摄影作品',en:'PHOTOGRAPHY',note:'个人兴趣与视觉观察',description:'空间、城市与材质的观察。'},
- {id:'drawing',name:'手绘',en:'HAND DRAWING',note:'设计思考与表达练习',description:'概念草图与设计表达。'}
+ {id:'drawing',name:'手绘 / 绘画',en:'DRAWING / PAINTING',note:'设计思考与表达练习',description:'概念草图与设计表达。'}
 ];
 function PracticeDetail({section}){
  return <main className="practice-detail wrap"><a className="back" href="#practice">← 返回创作延展</a><div className="project-heading"><div><p className="kicker">03 / EXTENDED PRACTICE</p><h1>{section.name}</h1></div><p>{section.en}</p></div><div className={`practice-detail-empty practice-detail-empty-${section.id}`}><span className="practice-detail-label">{section.en}</span><strong>CONTENT TO BE ADDED</strong><p>{section.description}<br/>{section.note}</p></div></main>
@@ -69,7 +70,7 @@ useLayoutEffect(()=>{const root=document.documentElement;const lightPage=route==
  async function copy(){try{await navigator.clipboard.writeText('z595654303');setCopied(true);setTimeout(()=>setCopied(false),2500)}catch{setCopied(false)}}
  useEffect(()=>{if(route!=='#home')return;const timer=window.setInterval(()=>setSlide(current=>(current+1)%heroProjects.length),5200);return()=>window.clearInterval(timer)},[route]);
  const isHome=route==='#home';
- let content=isHome?<Home slide={slide} onNext={nextSlide}/>:route==='#about'?<About/>:route==='#work'?<PortfolioArchive/>:route==='#practice'?<Extensions imageProps={imageProps}/>:route==='#contact'?<Contact copied={copied} copy={copy}/>:project?<main className="detail wrap"><a className="back" href="#work">← 返回精选作品</a><div className="project-heading"><div><p className="kicker">PROJECT / {project.city.toUpperCase()}</p><h1>{project.name}</h1></div><p>{project.kind} / {project.area} m² / {project.year}</p></div>{project.note&&<p className="project-note">{project.note}</p>}<div className="detail-images">{project.images.map((image,i)=><figure key={image}><img {...imageProps(image,{width:1800,sizes:DETAIL_SIZES,quality:80})} alt={`${project.name} · 项目图 ${i+1}`} loading={i?'lazy':'eager'}/><figcaption>{String(i+1).padStart(2,'0')} / {String(project.images.length).padStart(2,'0')}<span>{project.name}</span></figcaption></figure>)}</div></main>:practiceSection?.id==='built'?<BuiltPhotography imageProps={imageProps} route={route}/>:practiceSection?.id==='photo'?<Photography imageProps={imageProps}/>:practiceSection?<PracticeDetail section={practiceSection}/>:<Home slide={slide} onNext={nextSlide}/>;
+ let content=isHome?<Home slide={slide} onNext={nextSlide}/>:route==='#about'?<About/>:route==='#work'?<PortfolioArchive/>:route==='#practice'?<Extensions imageProps={imageProps}/>:route==='#contact'?<Contact copied={copied} copy={copy}/>:project?<main className="detail wrap"><a className="back" href="#work">← 返回精选作品</a><div className="project-heading"><div><p className="kicker">PROJECT / {project.city.toUpperCase()}</p><h1>{project.name}</h1></div><p>{project.kind} / {project.area} m² / {project.year}</p></div>{project.note&&<p className="project-note">{project.note}</p>}<div className="detail-images">{project.images.map((image,i)=><figure key={image}><img {...imageProps(image,{width:1800,sizes:DETAIL_SIZES,quality:80})} alt={`${project.name} · 项目图 ${i+1}`} loading={i?'lazy':'eager'}/><figcaption>{String(i+1).padStart(2,'0')} / {String(project.images.length).padStart(2,'0')}<span>{project.name}</span></figcaption></figure>)}</div></main>:practiceSection?.id==='built'?<BuiltPhotography imageProps={imageProps} route={route}/>:practiceSection?.id==='photo'?<Photography imageProps={imageProps}/>:practiceSection?.id==='drawing'?<Drawing imageProps={imageProps}/>:practiceSection?<PracticeDetail section={practiceSection}/>:<Home slide={slide} onNext={nextSlide}/>;
  return <><header className={isHome?'home-header':'solid'}><a className="logo" href="#home" aria-label="张宏志 首页"><img className="brand-mark" src="/assets/hz-logo.png" alt=""/><span>张宏志<br/>INTERIOR DESIGNER</span></a><nav aria-label="Primary navigation"><a className={route==='#about'?'active':''} href="#about">ABOUT <small>01</small></a><a className={route==='#work'?'active':''} href="#work">SELECTED WORK <small>02</small></a><a className={route.startsWith('#practice')?'active':''} href="#practice">EXTENSIONS <small>03</small></a><a className={route==='#contact'?'active':''} href="#contact">CONTACT <small>04</small></a></nav></header>{content}{!isHome&&<footer className="wrap"><a className="footer-logo" href="#home"><img className="brand-mark" src="/assets/hz-logo.png" alt="HZ"/></a><span>© 2026 · 室内设计 / 视觉表达</span><a href="#home">首页 ↑</a></footer>}</>
 }
 createRoot(document.getElementById('root')).render(<App/>);

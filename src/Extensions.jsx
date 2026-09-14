@@ -4,7 +4,7 @@ import './extensions.css';
 const sections=[
  {id:'built',name:'项目拍摄',en:'PROJECT PHOTOGRAPHY',note:'空间落成之后，生活开始之前。',images:['/assets/built/project-4-0.jpg','/assets/built/project-4-1.jpg','/assets/built/project-4-10.jpg','/assets/built/project-4-12.jpg']},
  {id:'photo',name:'摄影作品',en:'PHOTOGRAPHY',note:'山野、街巷，与偶然停留的瞬间。',images:['/assets/photography/photo-7.jpg','/assets/photography/photo-0.jpg','/assets/photography/photo-2.jpg','/assets/photography/photo-10.jpg']},
- {id:'drawing',name:'手绘',en:'HAND DRAWING',note:'让思绪，落在纸上。',images:Array(4).fill('/assets/practice-drawing-cover-v2.png')}
+ {id:'drawing',name:'手绘 / 绘画',en:'DRAWING / PAINTING',note:'让思绪，落在纸上。',images:['/assets/drawing/drawing-3.webp','/assets/drawing/drawing-5.webp','/assets/drawing/drawing-8.webp','/assets/drawing/drawing-9.webp']}
 ];
 export default function Extensions({imageProps}) {
  return <main id="practice" className="work-archive-page extensions-index" aria-labelledby="practice-title">
@@ -18,6 +18,6 @@ export default function Extensions({imageProps}) {
     <div className="archive-filmstrip"><div className="archive-filmtrack">{[0,1].map(copy=><div className="archive-filmgroup" key={copy} aria-hidden={copy===1?true:undefined}>{section.images.map((src,i)=><div key={i}><img {...imageProps(src,{width:1200,sizes:'(max-width:700px) 80vw,40vw',quality:88})} alt={copy===0&&i===0?section.name:''} loading={index===0?'eager':'lazy'}/></div>)}</div>)}</div></div>
    </a>)}
   </div>
-  <div className="wrap extensions-colophon"><span>空间 / 观察 / 表达</span><span>A CONTINUING EXPLORATION</span></div>
+  <div className="wrap extensions-colophon"><span>空间 / 观察 / 表达 / 爱好</span><span>A CONTINUING EXPLORATION</span></div>
  </main>;
 }
