@@ -71,7 +71,7 @@ function App(){
  const practiceSection=practiceSections.find(p=>(route===`#practice/${p.id}` || route.startsWith(`#practice/${p.id}/`)));
 useLayoutEffect(()=>{const root=document.documentElement;const lightPage=route==='#work'||route==='#practice'||route==='#contact'||practiceSection?.id==='built';const theme=project?.theme||(lightPage?'light':'dark');root.dataset.projectTheme=project?theme:(lightPage?'light':'home');root.dataset.practiceTheme=practiceSection?.id==='built'?'built':'';root.style.setProperty('--project-background',project?.background||(theme==='light'?'#f5f5f3':'#101111'));const meta=document.querySelector('meta[name="theme-color"]');if(meta)meta.content=lightPage?'#f2f1ec':project?.background||(theme==='light'?'#f5f5f3':'#101111');return()=>{delete root.dataset.projectTheme;root.style.removeProperty('--project-background');delete root.dataset.practiceTheme}},[project,practiceSection,route]);
 
- useEffect(()=>{document.title=practiceSection?.id==='built'?'项目拍摄 — 张宏志 HZ':project?`${project.name} — 张宏志 HZ`:'张宏志 HZ — 室内设计师';document.documentElement.dataset.route=route==='#home'?'home':'page'},[route,project,practiceSection]);
+ useEffect(()=>{document.title='PORTFOLIO-HZ';document.documentElement.dataset.route=route==='#home'?'home':'page'},[route,project,practiceSection]);
  async function copy(){try{await navigator.clipboard.writeText('z595654303');setCopied(true);setTimeout(()=>setCopied(false),2500)}catch{setCopied(false)}}
  useEffect(()=>{if(route!=='#home')return;const timer=window.setInterval(()=>setSlide(current=>(current+1)%heroProjects.length),5200);return()=>window.clearInterval(timer)},[route]);
  const isHome=route==='#home';

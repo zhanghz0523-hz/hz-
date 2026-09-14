@@ -10,7 +10,7 @@ export default function Drawing({imageProps}){
  const selected=collection.filter(p=>filter==='all'||p.category===filter);
  const current=selected.findIndex(p=>p.id===active?.id);
  const step=direction=>setActive(selected[(current+direction+selected.length)%selected.length]);
- useEffect(()=>{window.scrollTo(0,0);document.title='手绘 / 绘画 — 张宏志 HZ';},[]);
+ useEffect(()=>{window.scrollTo(0,0);document.title='PORTFOLIO-HZ';},[]);
  useEffect(()=>{if(active){dialog.current.showModal();const previous=document.body.style.overflow;document.body.style.overflow='hidden';return()=>{document.body.style.overflow=previous;};}else dialog.current?.close();},[active]);
  const label=p=>`${groups.find(g=>g.id===p.category).name} · ${String(collection.indexOf(p)+1).padStart(2,'0')}`;
  return <main className="photo-page wrap">
